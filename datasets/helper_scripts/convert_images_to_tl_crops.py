@@ -59,11 +59,11 @@ def crop_traffic_lights(json_file, output_dir, image_dir, min_width=10, toleranc
                         
                         traffic_light.save(output_path)
                         # Add data to the new JSON
-                        output_filename = {
+                        output_data = {
                             'state': state,
                             'pictogram': pictogram
                         }
-                        new_data[traffic_light["output_filename"]] = output_filename
+                        new_data[output_filename] = output_data
         
         # Save the new JSON file
         new_json_file = os.path.join(output_dir, 'traffic_lights.json')
